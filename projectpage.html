@@ -126,20 +126,20 @@
 
                     if (json.thumbnail) {
                         json.thumbnail.forEach(item => {
-                            document.getElementById("project-img").innerHTML += `<img class="img-fluid mb-3" src="${item}" alt="">`
+                            document.getElementById("project-img").innerHTML += `<img class="img-fluid mb-3" src="./${item}" alt="">`
                         })
                     }
 
                     if (json.video) {
                         json.video.forEach(item => {
-                            document.getElementById("project-video").innerHTML += `<video class="img-fluid mb-3" autoplay> <source src="${item}" type="video/mp4"> </video>`
+                            document.getElementById("project-video").innerHTML += `<video class="img-fluid mb-3" autoplay> <source src="./${item}" type="video/mp4"> </video>`
                         })
                     }
 
                     document.getElementById("project-description").innerHTML = json.description;
 
                     json.icons.forEach(item => {
-                        document.getElementById("project-software-icon").innerHTML += `<img class="software-icon-prj me-3" src="${item}" alt="">`
+                        document.getElementById("project-software-icon").innerHTML += `<img class="software-icon-prj me-3" src="./${item}" alt="">`
                     })
 
                 });
