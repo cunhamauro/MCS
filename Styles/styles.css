@@ -1,0 +1,34 @@
+#about {
+    padding: 60px 0;
+ }
+
+ #contacts {
+    padding: 60px 0;
+    padding-bottom: 10px;
+}
+
+#gallery {
+    padding: 60px 0;
+ }
+
+ #cv-head {
+    padding-top: 60px;
+ }
+.software-icon {
+    height: 30px;
+    width: 30px;
+ }
+
+ #projectpage {
+    padding-top: 60px;
+}
+
+.software-icon {
+    height: 30px;
+    width: 30px;
+}
+
+.software-icon-prj {
+    height: 40px;
+    width: 40px;
+}

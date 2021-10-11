@@ -1,0 +1,7 @@
+{
+    "title":"Donut 3D Model",
+    "thumbnail":["/assets/3donut1.png", "/assets/3donut2.png", "/assets/3donut3.png",
+    "/assets/3donut4.png", "/assets/3donut5.png", "/assets/3donut6.png"],
+    "icons":["/assets/Web icons/blender icon.jpg"],
+    "description":"3D Modeling project made in the scope of the Donut 3D Challenge by BlenderGuru."
+}

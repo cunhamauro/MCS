@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <!-- Required Meta Tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="/node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+  <!-- CSS -->
+  <link rel="stylesheet" href="/Styles/styles.css">
+
+  <title>Portfolio</title>
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+    <div class="container-xxl">
+      <a href="/index.html" class="navbar-brand">
+        <span class="fw-bolder fs-4 text-dark">
+          Mauro Cunha <span class="fw-light">Studio</span>
+        </span>
+      </a>
+
+      <!-- Toggle Button -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
+        aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+        </span>
+      </button>
+
+      <!-- Navbar Links -->
+      <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+        <ul class="navbar-nav fs-5">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/portfolio.html">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a href="/cv.html" class="nav-link">CV</a>
+          </li>
+          <li class="nav-item">
+            <a href="/contacts.html" class="nav-link">Contacts</a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- css masonry perfect TRY overlay hover     
+    .hover-img {
+      filter: blur(0px) grayscale(0%);
+      transition: .5s ease;
+      opacity: 1;
+    }
+
+    .hover-img:hover {
+      filter: blur(2px) grayscale(100%);
+      transition: .4s ease;
+      opacity: 0.6; 
+    }-->
+
+  <style>
+    .container-gallery {
+      column-count: 4;
+      margin: 0 auto;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+    }
+
+    video {
+      width: 100%;
+      height: auto;
+      display: block;
+      margin-bottom: 15px;
+      box-sizing: border-box;
+    }
+
+    @media screen and (max-width: 992px) {
+      .container-gallery {
+        column-count: 2;
+      }
+    }
+
+    @media screen and (max-width: 576px) {
+      .container-gallery {
+        column-count: 1;
+      }
+    }
+
+    .image {
+      position: relative;
+      width: 100%;
+
+    }
+
+    .image-img {
+      display: block;
+      width: 100%;
+    }
+
+    .image-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.6);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s;
+      text-align: center;
+    }
+
+    .image-overlay>* {
+      transform: translateY(20px);
+      transition: transform 0.3s;
+    }
+
+    .image-overlay:hover>* {
+      transform: translateY(0);
+    }
+
+    .image-overlay:hover {
+      opacity: 1;
+    }
+
+    .software-icon {
+      height: 30px;
+      width: 30px;
+    }
+
+    .software-icon-div {
+      display: flex;
+    }
+  </style>
+
+  <div style="height: 30px;"></div>
+
+  <div class="container mt-5">
+    <div class="container-gallery">
+      <div class="image">
+        <img src="/assets/Mapa Transrendufense 1º Version.png" alt="" class="image-img">
+        <a href="/projectpage.html?projectName=MapaTransrendufense1">
+          <div class="image-overlay">
+            <div class="lead fs-4 fw-bold text-center">Mapa Transrendufense<br>1º Version</div>
+            <p class="lead fs-6 mt-1">Graphic Design</p>
+            <div class="software-icon-div">
+              <img class="software-icon m-1" src="/assets/Adobe PNG icons/Illustrator.png" alt=""> <img
+                class="software-icon m-1" src="/assets/Adobe PNG icons/Photoshop.png" alt="">
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="image">
+        <img src="/assets/Mapa Transrendufense 2º Version.png" alt="" class="image-img">
+        <a href="/projectpage.html?projectName=MapaTransrendufense2">
+          <div class="image-overlay">
+            <div class="lead fs-4 fw-bold text-center">Mapa Transrendufense<br>2º Version</div>
+            <p class="lead fs-6 mt-1">Graphic Design</p>
+            <div class="software-icon-div">
+              <img class="software-icon m-1" src="/assets/Adobe PNG icons/Illustrator.png" alt=""> <img
+                class="software-icon m-1" src="/assets/Adobe PNG icons/Photoshop.png" alt="">
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="image">
+        <img
+          src="/assets/Mauro Cunha AL68348 3ºAno Ciências da Comunicação Design Gráfico Professor José Sousa Versão RGB.jpg"
+          alt="" class="image-img">
+        <a href="/projectpage.html?projectName=CartazSaudeMental">
+          <div class="image-overlay">
+            <div class="lead fs-4 fw-bold text-center">Cartaz Saúde Mental Covid-19</div>
+            <p class="lead fs-6 mt-1">Graphic Design & Advertising</p>
+            <div class="software-icon-div">
+              <img class="software-icon m-1" src="/assets/Adobe PNG icons/Illustrator.png" alt=""> <img
+                class="software-icon m-1" src="/assets/Adobe PNG icons/Photoshop.png" alt="">
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="image">
+        <img src="/assets/MCS. website mockups.jpg" alt="" class="image-img">
+        <a href="/projectpage.html?projectName=MCSwebsite">
+          <div class="image-overlay">
+            <div class="lead fs-4 fw-bold text-center">MCS. Personal Website</div>
+            <p class="lead fs-6 mt-1">Front-End Web Development</p>
+            <div class="software-icon-div">
+              <img class="software-icon m-1" src="/assets/Web icons/bootstrap icon.png" alt=""> <img
+                class="software-icon m-1" src="/assets/Web icons/html icon.png" alt=""> <img class="software-icon m-1"
+                src="/assets/Web icons/CSS icon.png" alt=""> <img class="software-icon m-1"
+                src="/assets/Web icons/JS icon.png" alt="">
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="image">
+        <img src="/assets/flux.png" alt="" class="image-img">
+        <a href="/projectpage.html?projectName=flux">
+          <div class="image-overlay">
+            <div class="lead fs-4 fw-bold text-center">Flux Logo</div>
+            <p class="lead fs-6 mt-1">Graphic Design</p>
+            <div class="software-icon-div">
+              <img class="software-icon m-1" src="/assets/Adobe PNG icons/Illustrator.png" alt="">
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="image">
+        <img src="/assets/Flyer Pimentel Publicidade.png" alt="" class="image-img">
+        <a href="/projectpage.html?projectName=FlyerPimentel">
+          <div class="image-overlay">
+            <div class="lead fs-4 fw-bold text-center">Flyer Pimentel<br>Publicidade</div>
+            <p class="lead fs-6 mt-1">Graphic Design & Advertising</p>
+            <div class="software-icon-div">
+              <img class="software-icon m-1" src="/assets/Adobe PNG icons/Illustrator.png" alt=""> <img
+                class="software-icon m-1" src="/assets/Adobe PNG icons/Photoshop.png" alt="">
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="image">
+        <img src="/assets/Vin'Douro app presentation thumbnail.png" alt="" class="image-img">
+        <a href="/projectpage.html?projectName=VindouroMockup">
+          <div class="image-overlay">
+            <div class="lead fs-4 fw-bold text-center">Vin'Douro Mockup</div>
+            <p class="lead fs-6 mt-1">Graphic Design, Animation<br>& Video Editing</p>
+            <div class="software-icon-div">
+              <img class="software-icon m-1" src="/assets/Adobe PNG icons/Illustrator.png" alt=""> <img
+                class="software-icon m-1" src="/assets/Adobe PNG icons/Photoshop.png" alt=""> <img
+                class="software-icon m-1" src="/assets/Adobe PNG icons/After Effects.png" alt=""> <img
+                class="software-icon m-1" src="/assets/Adobe PNG icons/Premiere Pro.png" alt="">
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="image">
+        <img src="/assets/MCS. white thumbnail.png" alt="" class="image-img">
+        <a href="/projectpage.html?projectName=MCSanimation">
+          <div class="image-overlay">
+            <div class="lead fs-4 fw-bold text-center">MCS. Animation</div>
+            <p class="lead fs-6 mt-1">Graphic Design, Animation<br>& Video Editing</p>
+            <div class="software-icon-div">
+              <img class="software-icon m-1" src="/assets/Adobe PNG icons/Illustrator.png" alt=""> <img
+                class="software-icon m-1" src="/assets/Adobe PNG icons/After Effects.png" alt=""> <img
+                class="software-icon m-1" src="/assets/Adobe PNG icons/Premiere Pro.png" alt="">
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <div class="image">
+        <img src="/assets/3Dmod Donut.png" alt="" class="image-img">
+        <a href="/projectpage.html?projectName=3Donut">
+          <div class="image-overlay">
+            <div class="lead fs-4 fw-bold text-center">Donut 3D Model</div>
+            <p class="lead fs-6 mt-1">3D Modeling</p>
+            <div class="software-icon-div">
+              <img class="software-icon m-1" src="/assets/Web icons/blender icon.jpg" alt="">
+            </div>
+          </div>
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white py-2 text-center">
+    <div class="container mt-3 fs-1">
+      <a target="_blank" href="https://www.facebook.com/cunhamauro/"><i
+          class="bi bi-facebook link-secondary mx-2"></a></i>
+      <a target="_blank" href="https://www.instagram.com/mauro7cunha/"><i
+          class="bi bi-instagram link-secondary mx-2"></a></i>
+      <a target="_blank" href="https://github.com/cunhamauro"><i class="bi bi-github link-secondary mx-2"></i></a>
+      <a target="_blank" href="https://www.linkedin.com/in/cunhamauro/"><i
+          class="bi bi-linkedin link-secondary mx-2"></i></a>
+    </div>
+    <p class="text-muted lead mt-2 fs-6">TM & © 2021 MCS. by Mauro Cunha</p>
+  </footer>
+
+  <!-- Bootstrap Bundle with Popper -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+  <!-- Javascript -->
+  <script>
+  </script>
+
+</body>
+
+</html>

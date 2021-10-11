@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="/node_modules/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="/Styles/styles.css">
+
+    <title>CV</title>
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-md navbar-light bg-light">
+        <div class="container-xxl">
+            <a href="/index.html" class="navbar-brand">
+                <span class="fw-bolder fs-4 text-dark">
+                    Mauro Cunha <span class="fw-light">Studio</span>
+                </span>
+            </a>
+
+            <!-- Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
+                aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                </span>
+            </button>
+
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse justify-content-end align-center" id="main-nav">
+                <ul class="navbar-nav fs-5">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/portfolio.html">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/cv.html" class="nav-link">CV</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="/contacts.html" class="nav-link">Contacts</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- Project -->
+
+    <section id="projectpage" class="mt-3">
+
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div id="project-img">
+                        </div>
+                        <div id="project-video">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid bg-light mt-3">
+            <div class="container pt-4">
+
+                <h2 id="project-title" class="project-title"></h2>
+
+                <h4 id="project-description" class="lead project-description"></h4>
+
+                <div id="project-software-icon" class="mt-3 pb-4"></div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-2 text-center">
+        <div class="container mt-3 fs-1">
+            <a target="_blank" href="https://www.facebook.com/cunhamauro/"><i
+                    class="bi bi-facebook link-secondary mx-2"></a></i>
+            <a target="_blank" href="https://www.instagram.com/mauro7cunha/"><i
+                    class="bi bi-instagram link-secondary mx-2"></a></i>
+            <a target="_blank" href="https://github.com/cunhamauro"><i class="bi bi-github link-secondary mx-2"></i></a>
+            <a target="_blank" href="https://www.linkedin.com/in/cunhamauro/"><i
+                    class="bi bi-linkedin link-secondary mx-2"></i></a>
+        </div>
+        <p class="text-muted lead mt-2 fs-6">TM & © 2021 MCS. by Mauro Cunha</p>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+    <!-- Javascript -->
+    <script>
+        loadData();
+
+        function loadData() {
+
+            const url_string = window.location.href;
+            const url = new URL(url_string);
+            const projectName = url.searchParams.get("projectName");
+
+            if (!projectName) return window.location.href = location.origin;
+
+            fetch(`${location.origin}/projects/${projectName}.json`)
+                .then(response => response.json())
+                .then(json => {
+                    document.getElementById("project-title").innerHTML = json.title;
+
+                    if (json.thumbnail) {
+                        json.thumbnail.forEach(item => {
+                            document.getElementById("project-img").innerHTML += `<img class="img-fluid mb-3" src="${item}" alt="">`
+                        })
+                    }
+
+                    if (json.video) {
+                        json.video.forEach(item => {
+                            document.getElementById("project-video").innerHTML += `<video class="img-fluid mb-3" autoplay> <source src="${item}" type="video/mp4"> </video>`
+                        })
+                    }
+
+                    document.getElementById("project-description").innerHTML = json.description;
+
+                    json.icons.forEach(item => {
+                        document.getElementById("project-software-icon").innerHTML += `<img class="software-icon-prj me-3" src="${item}" alt="">`
+                    })
+
+                });
+        }
+
+    </script>
+
+</body>
+
+</html>
