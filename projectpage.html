@@ -113,9 +113,13 @@
             const url = new URL(url_string);
             const projectName = url.searchParams.get("projectName");
 
-            if (!projectName) return window.location.href = location.origin;
+            let origin = location.origin;
+            const firstElement = window.location.pathname.split('/')[1];
+            if (!firstElement.includes(".html")) origin += "/MCS";
 
-            fetch(`${location.origin}/projects/${projectName}.json`)
+            if (!projectName) return window.location.href = origin;
+
+            fetch(`${origin}/projects/${projectName}.json`)
                 .then(response => response.json())
                 .then(json => {
                     document.getElementById("project-title").innerHTML = json.title;
