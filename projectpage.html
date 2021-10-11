@@ -115,7 +115,7 @@
 
             let origin = location.origin;
             const firstElement = window.location.pathname.split('/')[1];
-            if (!firstElement.includes(".html")) origin += "/MCS";
+            if (!firstElement.includes(".html")) origin += `/${firstElement}`;
 
             if (!projectName) return window.location.href = origin;
 
