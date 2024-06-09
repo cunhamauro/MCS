@@ -1,6 +1,6 @@
 <img style="width: 80px; height: auto;" src="./assets/mcs-logo.png"></img>
 
-Project to explore: <br/><br/>
+My first website! A project to explore a bit of: <br/>
 • HTML <br/>
 • CSS <br/>
 • Bootstrap <br/>
